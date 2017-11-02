@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <sys/stat.h>
+
+int main(){
+  struct stat buffer;
+  stat("text.txt", &buffer);
+  double bytes = buffer.st_size;
+  return 0;
+}
